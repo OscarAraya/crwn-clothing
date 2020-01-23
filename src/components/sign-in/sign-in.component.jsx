@@ -14,7 +14,7 @@ class SignIn extends React.Component {
         this.state = {
             email: '',
             password: ''
-        }
+        };
     }
 
     handleSubmit = async event => {
@@ -34,7 +34,7 @@ class SignIn extends React.Component {
         const {value, name} = event.target;
 
         this.setState({[name]: value});
-    }
+    };
 
     render(){
         return (
@@ -53,8 +53,8 @@ class SignIn extends React.Component {
                     <FormInput 
                         name='password'
                         type='password'
-                        handleChange={this.handleChange}
                         value={this.state.password}
+                        handleChange={this.handleChange}
                         label='password'
                         required/>
                     <div className='buttons'>
@@ -65,7 +65,7 @@ class SignIn extends React.Component {
                     </div>
                 </form>
             </div>
-        )
+        );
     }
 }
 
